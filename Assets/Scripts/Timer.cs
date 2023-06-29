@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
     {
         UpdateUI(_remainingDuration);
         ResetTimer();
+        SetDuration(300).Begin();
     }
 
     private void Update()
@@ -98,6 +99,11 @@ public class Timer : MonoBehaviour
     {
         _onTimerPauseAction = action;
         return this;
+    }
+    public void AddTime(int seconds)
+    {
+        _remainingDuration += seconds;
+        UpdateUI(_remainingDuration);
     }
 
     public void Begin()

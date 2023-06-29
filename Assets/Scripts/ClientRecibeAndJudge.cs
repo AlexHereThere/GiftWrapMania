@@ -10,6 +10,7 @@ public class ClientRecibeAndJudge : MonoBehaviour
     [SerializeField]
     private ScoreManager scoreManager;
     private HealthManager healthManager;
+    private Timer timer;
 
     private bool alreadyDamaged;
     
@@ -23,6 +24,7 @@ public class ClientRecibeAndJudge : MonoBehaviour
     myColor = gameObject.tag; // sacar el tag del regalo que representa el color
     scoreManager = GameObject.Find("ScoreText").GetComponent<ScoreManager>();
     healthManager = GameObject.Find("HealthSystem").GetComponent<HealthManager>();
+    timer = GameObject.Find("TimerLayout").GetComponent<Timer>();
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class ClientRecibeAndJudge : MonoBehaviour
                 //El jugador obtiene la puntuacion
                 scoreManager.addScore(100);
                 scoreManager.updateScore();
-                
+                timer.AddTime(30);
 
             }
             else
