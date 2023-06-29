@@ -8,18 +8,18 @@ public class PauseMenu : MonoBehaviour {
 
     private void Update()
     {
-        if (GameIsPaused && pauseMenuUI != null)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = false;
-        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (GameIsPaused && pauseMenuUI != null)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = false;
+            }
             if (GameIsPaused)
             {
                 Resume();
