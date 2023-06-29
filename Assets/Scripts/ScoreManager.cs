@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<Text>();
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -28,5 +29,10 @@ public class ScoreManager : MonoBehaviour
     public void updateScore()
     {
         scoreText.text = "Score: " + scoreValue.ToString();
+    }
+
+    public int getScore()
+    {
+        return scoreValue;
     }
 }

@@ -14,6 +14,9 @@ public class Timer : MonoBehaviour
     private bool IsPaused { get; set; }
     private int _remainingDuration;
 
+    public DeathManager deathManager;
+    private ScoreManager scoreManager;
+
     // Events --
     private UnityAction _onTimerBeginAction;
     private UnityAction<int> _onTimerChangeAction;
@@ -22,9 +25,11 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        scoreManager = GameObject.Find("ScoreText").GetComponent<ScoreManager>();
         UpdateUI(_remainingDuration);
         ResetTimer();
-        SetDuration(300).Begin();
+        //Se movio el timer para hacer pruebas de gameover
+        SetDuration(10).Begin();
     }
 
     private void Update()
@@ -91,6 +96,7 @@ public class Timer : MonoBehaviour
 
     public Timer OnEnd(UnityAction action)
     {
+        
         _onTimerEndAction = action;
         return this;
     }
@@ -144,6 +150,7 @@ public class Timer : MonoBehaviour
 
     private void End()
     {
+        deathManager.Setup(scoreManager.getScore());
         _onTimerEndAction?.Invoke();
     }
 

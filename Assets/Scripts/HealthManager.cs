@@ -11,11 +11,14 @@ public class HealthManager : MonoBehaviour
 
     public Image[] hearts;
     public Sprite fullHeart;
-   
+
+
+    public DeathManager deathManager;
+    private ScoreManager scoreManager;
 
     void Start()
     {
-        
+        scoreManager = GameObject.Find("ScoreText").GetComponent<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -45,6 +48,11 @@ public class HealthManager : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }   
+
+      if(health <= 0)
+        {
+            deathManager.Setup(scoreManager.getScore());
+        }
     }
 
     public void addHealth(int heal)
