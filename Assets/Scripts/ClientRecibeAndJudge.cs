@@ -37,7 +37,7 @@ public class ClientRecibeAndJudge : MonoBehaviour
         {
             Destroy(gameObject);
             client = other.gameObject.GetComponent<ClientBehavior>(); //sacar lo que quiere el cliente segun su script clientBehavior.
-            if (client.GetDesiredGift().name == myGift && client.GetDesiredColor() == myColor)
+            if (client.GetDesiredGift().name+"(Clone)" == myGift && client.GetDesiredColor() == myColor)
             {
                 print("Gracias.");
                 //El jugador obtiene la puntuacion

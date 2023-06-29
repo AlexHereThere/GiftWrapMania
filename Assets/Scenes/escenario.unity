@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.41065678, g: 0.43505183, b: 0.44397524, a: 1}
+  m_IndirectSpecularColor: {r: 0.410657, g: 0.43505257, b: 0.44397604, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1920,7 +1920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266657154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.927712, y: -1.551203, z: 5.50418}
+  m_LocalPosition: {x: 9.927712, y: -1.551203, z: 5.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2114,7 +2114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312817376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.927712, y: -1.551203, z: 3.34}
+  m_LocalPosition: {x: 9.927712, y: -1.551203, z: 2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2391,6 +2391,10 @@ PrefabInstance:
     - target: {fileID: 630175728372702559, guid: a136f24f402f0d44ab6c0c0f17171cf8, type: 3}
       propertyPath: m_Name
       value: Jugador
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043461670763989748, guid: a136f24f402f0d44ab6c0c0f17171cf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.552
       objectReference: {fileID: 0}
     - target: {fileID: 4562080703345608816, guid: a136f24f402f0d44ab6c0c0f17171cf8, type: 3}
       propertyPath: m_RootOrder
@@ -3470,7 +3474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &713582291
 PrefabInstance:
@@ -4823,6 +4827,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37
       objectReference: {fileID: 0}
+    - target: {fileID: 4882465006984595572, guid: 0e1e09f5f93fce84fa10800c055220ff, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6532788039991230162, guid: 0e1e09f5f93fce84fa10800c055220ff, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -5270,7 +5278,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1392621618 stripped
 Transform:
@@ -6871,7 +6879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698093742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.927712, y: -1.551203, z: 8.427}
+  m_LocalPosition: {x: 9.04, y: -1.551203, z: 9.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6916,7 +6924,7 @@ Transform:
   - {fileID: 65204775}
   - {fileID: 339941285}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1785768191 stripped
 Transform:
@@ -7330,7 +7338,7 @@ Transform:
   - {fileID: 1698093743}
   - {fileID: 312817377}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2001351912 stripped
 Transform:
@@ -7547,7 +7555,7 @@ Transform:
   - {fileID: 1116634234}
   - {fileID: 1849659156}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2119013530 stripped
 Transform:
