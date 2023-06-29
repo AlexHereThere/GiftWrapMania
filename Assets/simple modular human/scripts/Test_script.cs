@@ -383,7 +383,10 @@ public class Test_script : MonoBehaviour
     public List<GameObject> Stealing_points = new List<GameObject>();
     public List<GameObject> pick_up_points = new List<GameObject>();
 
-  
+   public void setWaypoint(GameObject waypoint)
+   {
+    way_points.Add(waypoint);
+   }
 
 
 }
