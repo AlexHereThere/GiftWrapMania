@@ -46,7 +46,8 @@ public class ClientRecibeAndJudge : MonoBehaviour
                 scoreManager.addScore(100);
                 scoreManager.updateScore();
                 timer.AddTime(30);
-                Destroy(other.gameObject);
+                Destroy(other.transform.parent.gameObject);
+
 
             }
             else
@@ -59,10 +60,13 @@ public class ClientRecibeAndJudge : MonoBehaviour
                     alreadyDamaged=true;
                     timer.SubstractTime(10);
                 }
-                Destroy(other.gameObject);
+
 
             }
+
         }
+        print("Yo di: " + myGift + "Color: " + myColor);
+        print("El cliente queria " + client.GetDesiredGift() + "Color: " + client.GetDesiredColor());
     }
 
 
