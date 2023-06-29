@@ -1,31 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClientSpeech : MonoBehaviour
 {
-    public ClientBehavior clientWantSource;
-    public GameObject colorYellow,colorSantaRed,colorGreen,colorBlue,colorSilver,colorSFRed;
-    public GameObject giftMii,giftPoly,giftX;
-
-    // Start is called before the first frame update
+    public Image desireGift;
+    public Image desireColor;
+    public ClientBehavior client;
     void Start()
     {
-  
-    if(clientWantSource.GetDesiredColor() == "YellowGift") colorYellow.SetActive(true);
-    else if(clientWantSource.GetDesiredColor() == "GreenGift") colorGreen.SetActive(true);
-    else if(clientWantSource.GetDesiredColor() == "BlueGift") colorBlue.SetActive(true);
-    else if(clientWantSource.GetDesiredColor() == "SilverGfit") colorSilver.SetActive(true);
-    else if(clientWantSource.GetDesiredColor() == "SantaRedGift") colorSantaRed.SetActive(true);
-    else if(clientWantSource.GetDesiredColor() == "SnowflakeRedGfit") colorSFRed.SetActive(true);
-    if(clientWantSource.GetDesiredGift().name == "Mii ifelse") giftMii.SetActive(true);
-    else if(clientWantSource.GetDesiredGift().name == "PolyStation") giftPoly.SetActive(true);
-    else if(clientWantSource.GetDesiredGift().name == "Xbox720") giftPoly.SetActive(true);
+        desireGift.color = client.GetDesiredGift().GetComponent<Renderer>().sharedMaterial.color;
+        desireColor.sprite = client.GetDesiredColor() switch
+        {
+            "YellowGift" => Resources.Load<Sprite>("Sprites/SantaGoldColor"),
+            "SantaRedGift" => Resources.Load<Sprite>("Sprites/SantaRedColor"),
+            "BlueGift" => Resources.Load<Sprite>("Sprites/SnowflakeBlueColor"),
+            "SilverGift" => Resources.Load<Sprite>("Sprites/TreeSilverColor"),
+            "GreenGift" => Resources.Load<Sprite>("Sprites/TreeGreenColor"),
+            "SnowflakeRedGift" => Resources.Load<Sprite>("Sprites/SnowflakeRedColor"),
+            _ => Resources.Load<Sprite>("Sprites/TreeGreenColor")
+        };
+        print(
+            client.GetDesiredColor() + " -> " +
+            desireColor.sprite);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
