@@ -12,7 +12,7 @@ public class ClientBehavior: MonoBehaviour
 
     public GameObject iWantGift;//por el momento seran public (para probar, cambiar despues)
     public string iWantColor;
-    //public String
+    
     // Start is called before the first frame update
     void Start()
     {
