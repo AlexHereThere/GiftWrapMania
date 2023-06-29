@@ -46,6 +46,7 @@ public class ClientRecibeAndJudge : MonoBehaviour
                 scoreManager.addScore(100);
                 scoreManager.updateScore();
                 timer.AddTime(30);
+                Destroy(other.gameObject);
 
             }
             else
@@ -56,8 +57,10 @@ public class ClientRecibeAndJudge : MonoBehaviour
                 {
                     healthManager.getDamaged();
                     alreadyDamaged=true;
+                    timer.SubstractTime(10);
                 }
-                
+                Destroy(other.gameObject);
+
             }
         }
     }

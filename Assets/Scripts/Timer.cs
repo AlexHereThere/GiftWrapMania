@@ -106,6 +106,12 @@ public class Timer : MonoBehaviour
         UpdateUI(_remainingDuration);
     }
 
+    public void SubstractTime(int seconds)
+    {
+        _remainingDuration -= seconds;
+        UpdateUI(_remainingDuration);
+    }
+
     public void Begin()
     {
         _onTimerBeginAction?.Invoke();
