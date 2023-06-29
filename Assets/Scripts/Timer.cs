@@ -34,15 +34,6 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        // init timer
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetDuration(10).OnBegin(() => Debug.Log("Timer begin"))
-                .OnChange(seconds => Debug.Log($"Timer changed : {seconds}"))
-                .OnEnd(() => Debug.Log("Timer end"))
-                .OnPause(isPaused => Debug.Log($"Timer paused : {isPaused}"))
-                .Begin();
-        }
         UpdateUI(_remainingDuration);
     }
 
