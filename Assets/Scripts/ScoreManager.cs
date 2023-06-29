@@ -7,16 +7,26 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField]
     private int scoreValue;
-    Text scoreText;
+    [SerializeField]
+    private Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreText = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void addScore(int points)
+    {
+        scoreValue += points;
+    }
+    public void updateScore()
+    {
+        scoreText.text = "Score: " + scoreValue.ToString();
     }
 }
